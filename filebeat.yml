@@ -1,0 +1,8 @@
+filebeat.inputs:
+- type: log
+  enabled: true
+  paths:
+    - /var/log/*.log
+#----------------------------- Logstash output --------------------------------
+output.logstash:
+  hosts: ["kibana.tfm.com:5044"]
