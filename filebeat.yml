@@ -2,7 +2,11 @@ filebeat.inputs:
 - type: log
   enabled: true
   paths:
-    - /var/log/*.log
+    - /var/log/spring.log
 #----------------------------- Logstash output --------------------------------
+output.elasticsearch:
+  hosts: ["kibana.tfm.com:9200"]
+  username: "elastic"
+  password: "changeme"
 output.logstash:
   hosts: ["kibana.tfm.com:5044"]
