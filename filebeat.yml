@@ -1,8 +1,7 @@
 filebeat.inputs:
 - type: log
-enabled: true
-paths:
-  - /var/log/spring.log
+  paths:
+    - /var/log/spring.log
 output.elasticsearch:
   hosts: ["kibana.tfm.com:5044"]
   username: "elastic"
